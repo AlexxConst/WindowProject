@@ -26,6 +26,5 @@ window.addEventListener('DOMContentLoaded', () => {
         'do_image_more',
         'inline_block'
     );
-    forms();
+    forms(modalState);
 });
-

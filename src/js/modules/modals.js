@@ -1,3 +1,6 @@
+import disableModal from './disableModal';
+import enableButton from './enableButton';
+
 const modals = () => {
     function bindModal(
         triggerSelector,
@@ -73,7 +76,16 @@ const modals = () => {
         '.popup_calc_end_close',
         false
     );
-    // showModalByTime('.popup', 60000);
+    showModalByTime('.popup', 60000);
+
+    disableModal(
+        '.form-control',
+        '.popup_calc_button',
+        '#width',
+        '#height',
+        'input'
+    );
+    enableButton('.checkbox', '.popup_calc_profile_button');
 };
 
 export default modals;
