@@ -2,13 +2,16 @@ import './slider';
 
 import changeModalState from './modules/changeModalState';
 import forms from './modules/forms';
+import images from './modules/images';
 import modals from './modules/modals';
 import tabs from './modules/tabs';
+import timer from './modules/timer';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     let modalState = {};
+    let deadline = '2023-03-21';
 
     changeModalState(modalState);
     modals();
@@ -27,4 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
         'inline_block'
     );
     forms(modalState);
+    timer('.container1', deadline);
+    images();
 });
